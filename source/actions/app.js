@@ -17,8 +17,8 @@ export const fetchDataAll = (data) => (async dispatch => {
       body: JSON.stringify(data)
     })
     .then((response) => {
-      console.log(response)
-      dispatch(dataFetch(response));
+      if(response.ok) dispatch(dataFetch(true));
+      else alert('Login Failed! Conform account info!')
     })
     .catch((error) => {
       console.log(error)
