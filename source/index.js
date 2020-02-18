@@ -4,17 +4,21 @@ import { Provider } from 'react-redux';
 import { createAppContainer, createStackNavigator } from 'react-navigation';
 
 import Store from './reduxStore'
+import LoginPage from './pages/login';
 import HomePage from './pages/home';
 
 const Router = createStackNavigator(
   {
+    Login: { 
+      screen: LoginPage
+    },
     Home: { 
       screen: HomePage
     }
   },
   {
     index: 0,
-    initialRouteName: 'Home',
+    initialRouteName: 'Login',
     defaultNavigationOptions: {
       header: null,
     }
