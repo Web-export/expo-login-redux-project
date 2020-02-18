@@ -14,7 +14,6 @@ class Login extends Component {
   }
   componentDidMount() {
     const { fetchDataAll, dispatch } = this.props;
-    // fetchDataAll()
   }
   
   login = () => {
